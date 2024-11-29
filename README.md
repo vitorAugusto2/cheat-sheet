@@ -23,7 +23,6 @@ Bem-vindo ao **HackSheet**, um repositório criado para compartilhar e organizar
 - ✅ Atualizado frequentemente.
 - ✅ Perfeito para consulta rápida durante projetos e estudos.
 
----
 
 ## 🚀 **Contribua com o HackSheet**
 📩 **Contribuições são bem-vindas!** Se você tem alguma sugestão ou recurso interessante, sinta-se à vontade para enviar um PR. Vamos construir juntos um repositório poderoso e colaborativo! 
