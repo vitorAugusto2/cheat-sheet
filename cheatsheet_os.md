@@ -48,7 +48,7 @@
 ## Tabela de Comandos
 
 | Comando | Descrição |
-| --- | --- |
+|  |  |
 | os.getcwd() | Obtém o diretório de trabalho atual |
 | os.chdir(path) | Muda o diretório de trabalho para o especificado |
 | os.listdir(path) | Lista arquivos e diretórios no caminho especificado |
@@ -73,7 +73,7 @@
 
 ### 1. **Introdução ao módulo `os`**
 
----
+
 O módulo `os` em Python é uma biblioteca padrão que fornece uma maneira de interagir com o sistema operacional. Ele oferece várias funções que permitem realizar operações de manipulação de arquivos e diretórios, gerenciamento de processos e variáveis de ambiente, entre outros.
 
 Ou seja, facilita a interação entre o Python e o sistema operacional. Ele permite que seu código Python seja independente do sistema, o que significa que o mesmo código pode ser executado em diferentes plataformas (Windows, Linux, MacOS) sem muitas modificações.
@@ -87,7 +87,7 @@ import os
 
 ### 2. **Trabalhando com diretórios**
 
----
+
 
 ### 2.1. Verificando o diretório atual
 
@@ -120,7 +120,7 @@ print(files)
 
 ### 3. **Manipulação de arquivos e diretórios**
 
----
+
 
 ### 3.1. Criando um novo diretório
 
@@ -165,7 +165,7 @@ os.removedirs("dir_pai/dir_filho")
 
 ### 4. **Informações sobre arquivos**
 
----
+
 
 ### 4.1. Verificando a existência de arquivos ou diretórios
 
@@ -202,7 +202,7 @@ print(f"Tamanho: {size} bytes")
 
 ### 5. **Trabalhando com variáveis de ambiente**
 
----
+
 
 As variáveis de ambiente são úteis para armazenar informações específicas do sistema, como o caminho do Python ou outras configurações do sistema operacional.
 
@@ -227,7 +227,7 @@ os.environ["MEU_VAR"] = "valor"
 
 ### 6. **Gerenciamento de processos**
 
----
+
 
 O módulo `os` também permite iniciar novos processos e interagir com processos do sistema.
 
@@ -256,7 +256,7 @@ print(f"O ID do processo atual é: {pid}")
 
 ### 7. **Funções relacionadas ao caminho dos arquivos**
 
----
+
 
 O módulo `os` também inclui subfunções para manipulação de caminhos de arquivos e diretórios. Elas estão disponíveis através de `os.path`.
 
@@ -294,7 +294,7 @@ print(file_ext)   # Saída: .txt
 
 # OS com dados
 
----
+
 
 Na área de ciência de dados, o módulo `os` é frequentemente utilizado para tarefas relacionadas à manipulação de arquivos e diretórios, especialmente em situações que envolvem automação de processos, organização de arquivos de dados e gerenciamento de pipelines. Vou apresentar alguns exemplos práticos e comuns onde o módulo `os` é amplamente utilizado.
 
