@@ -1,4 +1,4 @@
-# OS (SISTEMA OPERACIONAL)
+# OS 
 
 ## Índice
 
@@ -71,7 +71,7 @@
 | os.path.splitext(path) | Separa o nome do arquivo de sua extensão |
 
 
-### 1. **Introdução ao módulo `os`**
+### 1. **Introdução ao módulo `os` (Sistema Operacional)**
 
 
 O módulo `os` em Python é uma biblioteca padrão que fornece uma maneira de interagir com o sistema operacional. Ele oferece várias funções que permitem realizar operações de manipulação de arquivos e diretórios, gerenciamento de processos e variáveis de ambiente, entre outros.
