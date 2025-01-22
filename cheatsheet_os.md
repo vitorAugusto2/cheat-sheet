@@ -48,7 +48,7 @@
 ## Tabela de Comandos
 
 | Comando | Descrição |
-|  |  |
+| --- | --- |
 | os.getcwd() | Obtém o diretório de trabalho atual |
 | os.chdir(path) | Muda o diretório de trabalho para o especificado |
 | os.listdir(path) | Lista arquivos e diretórios no caminho especificado |
