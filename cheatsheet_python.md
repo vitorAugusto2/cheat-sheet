@@ -28,7 +28,6 @@
 - [15. Anotações de Tipo (Tipagem)](#15-anotações-de-tipo-tipagem)
 
 ## 1. Saída de dados com f-string
----
 
 ```python
 # print
@@ -64,7 +63,6 @@ print(f"""
 ```
 
 ## 2. Variáveis e Entrada de dados
----
 
 ```python
 # Operadores relacionais
@@ -121,7 +119,6 @@ print(f"Bonus: {bonus: 5.2f}")
 ```
 
 ## 3. Estrutura Condicional
----
 
 ```python
 # if e else
@@ -158,7 +155,6 @@ print(par_ou_impar)
 ```
 
 ## 4. Estrutura de repetição
----
 
 ```python
 # while
@@ -215,7 +211,6 @@ while tabuada <= 10:
 ```
 
 ## 5. Lista, dicionários, tuplas e conjuntos
----
 
 ### **5.1 Lista**
 
@@ -482,7 +477,6 @@ distinct_item_list = list(item_set)
 ```
 
 ## 6. String
----
 
 ```python
 # Strings literais
@@ -568,7 +562,6 @@ nome + "Augusto" + sobrenome
 ```
 
 ## 7. Funções
----
 
 ```python
 # def
@@ -682,7 +675,7 @@ from re import *                                -> importar conteudo inteiro
 ```
 
 ## 8. Arquivo
----
+ 
 
 ```python
 # r, w, a, +
@@ -718,7 +711,7 @@ else:
 ```
 
 ## 9. Classes e Objetos 
----
+ 
 
 ### **9.1 Objeto**
 
@@ -836,7 +829,6 @@ class ContaEspecial(Conta): # ContaEspecial herda de Conta
 ```
 
 ## 10. Formatação de espaco em branco
----
 
 ```python
 # Sem tabulação
@@ -849,7 +841,7 @@ two_plus_three = 2 + \
 ```
 
 ## 11. Defaultdict e Counter
----
+ 
 
 ```python
 from collections import defaultdict, Counter
@@ -863,7 +855,7 @@ c = Counter([0, 1, 2, 0])
 ```
 
 ## 12. Teste Automatizados e Asserção
----
+ 
 
 ```python
 def smalltest_item(xs):
@@ -875,7 +867,7 @@ assert smalltest_item([1, 0 , -1, 2]) == 0      # msg: AssertionError
 ```
 
 ## 13. Iteráveis e Geradores
----
+ 
 
 ```python
 # gerador 
@@ -895,7 +887,7 @@ for i, name in enumerate(names):
 ```
 
 ## 14. Zips e Descompactação de Argumento
----
+ 
 
 ```python
 # zip
@@ -915,7 +907,7 @@ lettres, numbers = zip(('a', 1), ('b', 2), ('c', 3))
 ```
 
 ## 15. Anotações de Tipo (Tipagem)
----
+ 
 
 ```python
 # tipada dinamicamente
