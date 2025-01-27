@@ -3,7 +3,7 @@
 
 ## Índice
 
-![SQL]()
+![sql_language](https://github.com/user-attachments/assets/d5370e6a-5c60-44cd-a7fa-3ba7446f9814)
 
 1. **DDL (Linguagem de Definição de Dados)**
    - [1.1 CREATE](#11-create)
