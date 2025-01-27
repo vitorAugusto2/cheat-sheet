@@ -1,9 +1,9 @@
 # SQL 
-
+---
 
 ## Índice
 
-![sql_language](https://github.com/user-attachments/assets/ff7603ee-2629-4f90-adce-c843c9809895)
+![SQL]()
 
 1. **DDL (Linguagem de Definição de Dados)**
    - [1.1 CREATE](#11-create)
@@ -40,10 +40,10 @@ CREATE TABLE nome_da_tabela (
 CREATE USER nome_do_usuario WITH PASSWORD 'senha';
 
 -- Chave primária
-PRIMARY KEY (nome_da_chave_primaria)
+PRIMARY KEY (nome_da_chave_primaria);
 
 -- Chave estrangeira
-FOREIGN KEY (nome_da_chave_primaria) REFRENCES schema.table(nome_da_coluna)
+FOREIGN KEY (nome_da_chave_primaria) REFERENCES nome_da_tabela(nome_da_coluna);
 ```
 
 ### 1.2 ALTER
@@ -102,7 +102,7 @@ VALUES (V1, V2, ..., VN)
 Remove registros na tabela
 
 ```sql
-DELETE FROM tabela
+DELETE FROM nome_da_tabela
 WHERE predicado;
 ```
 
@@ -110,7 +110,43 @@ WHERE predicado;
 Atualiza registros na tabela
 
 ```sql
-UPDATE <tabela>
+UPDATE nome_da_tabela
 SET atributo = xxxx
 WHERE predicado;
+```
+
+### 2.4 CASCADE
+Excluir ou atualizar os registros relacionados presentes nas tabelas referenciadas.
+
+Outros: `RESTRICT`, `SET NULL`, `NO ACTION` e `SET DEFAULT`
+
+```sql
+ALTER TABLE nome_da_tabela
+ADD CONSTRAINT nome_da_coluna_fk 
+FOREIGN KEY (nome_da_chave_primaria) REFERENCES nome_da_tabela(nome_da_coluna)
+ON DELETE CASCADE;
+```
+
+## 3. DQL (Linguagem de Consulta de Dados)
+
+### 3.1 SELECT
+Consultar os dados no armazenados no banco
+
+```sql
+SELECT atributo1, atributo2, ..., atributoN
+FROM relacao1, relacao2, ..., relacaoN
+WHERE predicado
+``` 
+
+### 3.2 RENAME AS
+```sql
+SELECT atributo1, atributo2, ..., atributoN
+FROM relacao1 AS a, relacao2 AS b, ..., relacaoN as z
+WHERE relacao1.a = releacao2.b, ..., relacaoN.z predicado;
+```
+
+```sql
+SELECT atributo1, atributo2, ..., atributoN
+FROM relacao1 as a, relacao2 as, ..., relacaoN
+WHERE r1.a = r2.a AND r3.a = rm.a AND ... predicado;
 ```
