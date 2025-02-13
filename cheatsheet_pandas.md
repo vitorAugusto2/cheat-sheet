@@ -277,7 +277,7 @@ Utiliza rótulos (`loc`) ou inteiros (`iloc`) para selecionar dados.
 Útil ao manipular uma combinação específica de linhas e colunas com condições; caso contrário, a manipulação direta é suficiente.
 
 | **Cenário** | **Método** |
-|  |  |
+|  --- | --- |
 | Você sabe os **rótulos** de índices ou colunas | `.loc` |
 | Você sabe a **posição** (inteira) dos dados | `.iloc` |
 | Precisa de uma **condição lógica** | `.loc` |
