@@ -1091,8 +1091,6 @@ df.pivot(
     values=None           # Coluna(s) cujos valores serão os valores resultantes
 )
 
-import pandas as pd
-
 # DataFrame
 df = pd.DataFrame({
     "Nome": ["Ana", "Beto", "Carla", "Ana", "Beto", "Carla"],
