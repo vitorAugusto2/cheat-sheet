@@ -133,12 +133,31 @@ ON DELETE CASCADE;
 Consultar os dados no armazenados no banco
 
 ```sql
+-- Lista os atributos desejados de uma consulta
 SELECT atributo1, atributo2, ..., atributoN
 FROM relacao1, relacao2, ..., relacaoN
+WHERE predicado   
+
+-- Valores unicos
+SELECT DISTINCT(atributo1)
+FROM relacao1
+
+
+-- Selecionar todos os atributos
+SELECT * 
+FROM relacao1, relacao2, ..., relacaoN
 WHERE predicado
+
+-- Where: especifica a condição que a resposta da consulta deve conter
+SELECT *
+FROM atributo1, atributo2
+WHERE atributo1 > atributo2 AND atributo1 = predicado
 ``` 
 
+
 ### 3.2 RENAME AS
+Renomea as colunas 
+
 ```sql
 SELECT atributo1, atributo2, ..., atributoN
 FROM relacao1 AS a, relacao2 AS b, ..., relacaoN as z
@@ -146,7 +165,96 @@ WHERE relacao1.a = releacao2.b, ..., relacaoN.z predicado;
 ```
 
 ```sql
+-- Usando alias
 SELECT atributo1, atributo2, ..., atributoN
 FROM relacao1 as a, relacao2 as, ..., relacaoN
 WHERE r1.a = r2.a AND r3.a = rm.a AND ... predicado;
+```
+
+### 3.3 JOINS
+```sql
+-- INNER JOIN: entre valores comuns
+SELECT * FROM a
+INNER JOIN b  ON a.key = b.key
+
+-- LEFT JOIN
+SELECT * FROM a 
+LEFT JOIN b ON a.key = b.key
+
+SELECT * FROM a
+LEFT JOIN b ON a.key = b.key
+WHERE b.key IS NULL
+
+-- RIGHT JOIN
+SELECT * FROM a
+RIGHT JOIN b ON a.key = b.key
+
+SELECT * FROM a
+RIGHT JOIN b ON a.key = b.key
+WHERE a.key IS NULL
+
+-- FULL JOIN
+SELECT * FROM a
+FULL JOIN b ON a.key = b.key
+
+SELECT * FROM a
+FULL JOIN b ON a.key = b.key
+WHERE a.key IS NULL OR b.key IS NULL 
+```
+
+## 3.4 AGREGAÇÕES 
+
+```sql
+-- agg: MAX, MIN, AVG e COUNT
+SELECT * AGG(atributo)
+FROM relacao
+WHERE predicado
+
+-- Group By
+SELECT * AGG(atributo1), atributo2
+FROM relacao1, relacao2
+GROUP BY predicado
+
+-- Order By - ASC/DESC: ordenar menor ou maior
+SELECT * AGG(atributo1), atributo2
+FROM relacao1, relacao2
+ORDER BY predicado ASC
+
+-- LIMIT
+SELECT * AGG(atributo1), atributo2
+FROM relacao1, relacao2
+ORDER BY predicado DESC LIMIT 2
+
+-- HAVING
+SELECT * AGG(atributo1), atributo2
+FROM relacao1, relacao2
+GROUP BY predicado
+HAVING AGG(predicado)
+
+-- UNION
+SELECT * FROM releacao1
+WHERE predicado1
+
+UNION
+
+SELECT * FROM relacao2
+WHERE predicado2
+
+-- INTERSECT
+SELECT * FROM releacao1
+WHERE predicado1
+
+INTERSECT   
+
+SELECT * FROM relacao2
+WHERE predicado2
+
+-- EXCEPT
+SELECT * FROM releacao1
+WHERE predicado1
+
+EXCEPT
+
+SELECT * FROM relacao2
+WHERE predicado2
 ```
