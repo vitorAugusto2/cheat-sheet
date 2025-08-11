@@ -40,7 +40,7 @@ $ git push
 $ git push --set --upstream origin [nome da branch/staging]
 ```
 
-#### Fluxos
+## Fluxos
 **(1) Single Branch**
 ```
 $ git init → git add → git status → git commit → git status → git push
@@ -55,6 +55,7 @@ $ git checkout master → git pull → git branch [nova] → mudanças [(1) Sing
 ```
 $ touch .gitignore | definir no arquivo o caminho do arquivo para não subir no controle de versão
 ```
+
 ## Lembrar
 ```
 $ git init
@@ -64,7 +65,7 @@ $ git commit -m "mensagem do commit"
 $ git push
 $ git branch
 $ git checkout [nome da branch]
-```
 $ git checkou -b [branch origem] [branch atual]
 $ git merge "branch a receber merge"
 $ git pull 
+``` 
