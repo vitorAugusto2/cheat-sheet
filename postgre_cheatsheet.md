@@ -1,4 +1,4 @@
-# POSTGRE
+# POSTGRESQL
 ---
 
 * Termos
