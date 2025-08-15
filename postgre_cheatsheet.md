@@ -141,5 +141,17 @@ FROM (SELECT * FROM table2 WHERE column1 = None) AS tb2
 
 ### **WHERE**
 ```sql
+-- WHERE: filtragem de dados
+--
+-- 1) Filtrar por uma coluna e limitar exibição
+SELECT *
+FROM table1
+WHERE column1 = 1
+LIMIT 10;
 
+-- 2) Utilizando LIKE
+SELECT *
+FROM table1
+WHERE column1 NOT LIKE ' 1
+LIMIT 10;
 ```
