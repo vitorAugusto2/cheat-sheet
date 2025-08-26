@@ -1,6 +1,4 @@
 # POSTGRESQL
----
-
 * Termos
 	- Palavra-chave: texto com significado em SQL
 		+ Ex: SELECT, FROM, INNER JOIN, ...
