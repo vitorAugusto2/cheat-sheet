@@ -210,6 +210,7 @@ HAVING COUNT(*) = 10;
 ### **ORDER BY**
 ```sql
 -- ORDER BY: classificar/ordenar os dados
+--
 -- 1) Classificar
 -- 1.1) Ascendente
 SELECT
