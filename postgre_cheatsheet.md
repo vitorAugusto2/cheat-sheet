@@ -7,7 +7,7 @@
 	- Funções: tipo especial de palavra-chave.
 		+ Ex: COUNT(), YEAR(), ...
 
-	- Indicadores: nome do objeto do banco de dados sendo uma tabela ou coluna
+	- Identificadores: nome do objeto do banco de dados sendo uma tabela ou coluna
 		+ Ex: 
 			```sql
 			SELECT a.**name** (coluna)
