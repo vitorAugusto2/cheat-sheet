@@ -67,8 +67,6 @@
 	6. ORDER BY
 
 ## DQL
----
-
 ### **SELECT**
 ```sql
 -- SELECT: colunas que queremos que uma instrução retorne
