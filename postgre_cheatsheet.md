@@ -245,3 +245,6 @@ FROM table1
 WHERE column1 = 1
 LIMIT 10;
 ```
+
+## DDL
+### 
