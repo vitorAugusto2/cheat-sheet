@@ -247,4 +247,124 @@ LIMIT 10;
 ```
 
 ## DDL
-### 
+### **DB**
+```sql
+-- 1) Exibir nome de Banco de Dados existentes
+\l 
+
+-- 2) Exibir nome de Banco de Dados atual
+SELECT current_database();
+
+-- 3) Mudar de Banco de Dados
+\c another_db 
+
+-- 4) Criar Banco de Dados
+CREATE DATABASE my_new_db;
+
+-- 5) Excluir Banco de Dados
+DROP DATABASE my_new_db;
+```
+
+
+
+### **CREATE**
+```sql
+-- 1) Criar tabela
+-- Restrições: NOT NULL, DEFAULT, CHECK, UNIQUE, PRIMARY KEY, FOREIGN KEY
+CREATE TABLE name_table (
+	column1 TYPE restriction,
+	column2 TYPE restriction,
+...
+); 
+
+-- 2) Inserir linhas
+INSERT INTO name_table (column1, column2, ...)
+VALUES
+	(value1, value2, ...)
+	(value1, value2, ...)
+	(value1, value2, ...);
+
+-- 3) Exibir nomes das tabelas existentes
+\dt
+
+-- 4) Criar tabela que não existe
+CREATE TABLE IF NOT EXISTS name_table (
+	column1 TYPE restriction,
+	column2 TYPE restriction,
+...
+); 
+
+-- 5) Excluir:
+-- 5.1) Totalmente
+DROP TABLE name_table;
+
+-- 5.2) Mantar a estrutura (truncar)
+DELETE FROM name_table;
+
+-- 6) Chaves primária e estrangeira
+-- 6.1) Chave primária: identifica de maneira exclusiva cada linha de dados
+CREATE TABLE name_table1 (
+	column1_id TYPE PRIMARY KEY
+	...
+); 
+
+-- Ou composta
+CREATE TABLE name_table1 (
+	column1_id  TYPE restriction,
+	column2_id  TYPE restriction,
+	...
+	CONSTRAINT pk_id1
+	PRIMARY KEY(column1_id, column2_id)
+); 
+-- 6.2) Chave estrangeira: referencia uma chave primária de outra tabela
+CREATE TABLE name_table1 (
+	column1_id TYPE PRIMARY KEY
+	...
+); 
+
+CREATE TABLE name_table2 (
+	id 		TYPE restriction,
+	column2_id TYPE restriction,
+	...
+	FOREIGN KEY(column2_id)
+	REFERENCES(column1_id)
+)
+
+-- 7) Gerar automaticamente
+CREATE TABLE name_table(
+	id SERIAL,
+	column2 TYPE restriction,
+	...
+);
+
+-- 8) Inserção de dados de um arquivo de texto em uma tabela 
+\copy new_table 
+	FROM '<file_path>/my_data.csv'
+	DELIMITER ',' CSV HEADER
+```
+
+### **UPDATE**
+```sql
+-- 1) Renomeação 
+-- 1.1) Tabela
+ALTER TABLE old_table_name
+RENAME TO new_table_name;
+
+-- 1.2) Coluna 
+ALTER TABLE my_table
+	RENAME COLUMN old_column_name
+	TO new_column_name;
+
+-- 2) Exibição
+\d my_table
+
+-- 3) Inclusão
+ALTER TABLE my_table
+	ADD new_num_columnn INTEGER,
+	ADD new_text_column VARCHAR(30);
+
+-- 4) Exclusão
+ALTER TABLE my_table
+	DROP COLUMN new_num_columnn,
+	DROP COLUMN new_text_column;
+```
