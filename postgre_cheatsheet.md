@@ -301,6 +301,9 @@ DROP TABLE name_table;
 -- 5.2) Mantar a estrutura (truncar)
 DELETE FROM name_table;
 
+-- 5.3) Referencia a chave estrangeira
+DELETE FROM name_table CASCADE;
+
 -- 6) Chaves primária e estrangeira
 -- 6.1) Chave primária: identifica de maneira exclusiva cada linha de dados
 CREATE TABLE name_table1 (
@@ -328,7 +331,7 @@ CREATE TABLE name_table2 (
 	...
 	FOREIGN KEY(column2_id)
 	REFERENCES(column1_id)
-)
+);
 
 -- 7) Gerar automaticamente
 CREATE TABLE name_table(
@@ -367,4 +370,53 @@ ALTER TABLE my_table
 ALTER TABLE my_table
 	DROP COLUMN new_num_columnn,
 	DROP COLUMN new_text_column;
+```
+
+### **INDEX**
+```sql
+-- 1) Criação para acelerar consultas
+CREATE INDEX my_index ON my_table (column1, column2, ...);
+
+-- 2) Exclusão
+DROP INDEX my_index;                                                     
+```
+
+### **VIEW**
+```sql
+-- 1) Criação
+CREATE VIEW name_view AS
+	query;
+
+-- 2) Atualizar
+CREATE OR REPLACE name_view AS
+	query;
+
+-- 3) Exclusão
+DROP VIEW name_view;
+
+-- 4) Exibir todas as view existentes
+SELECT table_name
+FROM information_schema.views
+WHERE table_schema NOT IN
+	('information_schema', 'pg_catalog');
+```
+
+### **TRANSAÇÕES**
+```sql
+-- 1. Iniciar transação
+START TRANSACTION;
+-- or
+BEGIN;
+
+-- 2. Alterações
+query;
+
+-- 3. Testes
+query;
+
+-- 4.1. Confirmar Alterações
+COMMIT;
+-- or
+-- 4.2. Desfazer Alterações
+ROLLBACK;  
 ```
