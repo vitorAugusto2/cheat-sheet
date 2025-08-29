@@ -448,7 +448,7 @@ $mytag$This is a string.$mytag$
 | \n        		  | Nova linha       |
 | \r        		  | Retorno de carro |
 | \b        	  	  | Backspace        |
-| \ \        		  | Barra invertida  |
+| \\        		  | Barra invertida  |
 
 | Tipo de dado | 
 |--------------|
