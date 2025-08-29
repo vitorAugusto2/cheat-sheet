@@ -1,4 +1,4 @@
-# POSTGRESQL
+# PostgreSQL
 * Termos
 	- Palavra-chave: texto com significado em SQL
 		+ Ex: SELECT, FROM, INNER JOIN, ...
@@ -265,8 +265,6 @@ CREATE DATABASE my_new_db;
 DROP DATABASE my_new_db;
 ```
 
-
-
 ### **CREATE**
 ```sql
 -- 1) Criar tabela
@@ -401,7 +399,7 @@ WHERE table_schema NOT IN
 	('information_schema', 'pg_catalog');
 ```
 
-### **TRANSAÇÕES**
+### **TRANSACTION**
 ```sql
 -- 1. Iniciar transação
 START TRANSACTION;
@@ -420,3 +418,60 @@ COMMIT;
 -- 4.2. Desfazer Alterações
 ROLLBACK;  
 ```
+
+
+## **Tipos de Dados**
+### **Dados numéricos**
+ 
+| Inteiros       | Decimal            | Flutuante        |
+|----------------|--------------------|------------------|
+| SMALLINT       | DECIMAL ou NUMERIC | REAL             |
+| INT ou INTEGER |					  | DOUBLE PRECISION |	
+| BIGINT         |					  |                  |
+| SMALLSERIAL    |                    |					 |
+| SERIAL         |                    |					 |
+| BIGSERIAL      |                    |					 |
+
+### **Dados de string**
+```sql
+'This is a string'
+'You're welcome.'
+
+$$This is a string.$$
+$mytag$This is a string.$mytag$
+```
+
+| Sequência de escape | Descrição        |
+|---------------------|------------------|
+| \'        		  | Aspa simples     |
+| \t       			  | Tabulação        |
+| \n        		  | Nova linha       |
+| \r        		  | Retorno de carro |
+| \b        	  	  | Backspace        |
+| \\        		  | Barra invertida  |
+
+| Tipo de dado | 
+|--------------|
+| CHAR         | 
+| VARCHAR      |
+
+
+### **Datatime**
+| Data 				  	    		   | Tempo                         | Data e Hora 							       |
+|--------------------------------------|-------------------------------|-----------------------------------------------|
+| SELECT DATE '2021-02-25';            | SELECT TIME '10:30';          | SELECT TIMESTAMP '2021-02-25 10:30';	       |
+| SELECT DATE('2021-0225');            | SELECT CAST('10:30' AS TIME); | SELECT CAST('2021-02-25 10:30' AS TIMESTAMP); |
+| SELECT CAST('2021-02-2025' AS DATE); |							   |											   |
+
+| Tipo de dado             | Descrição                      |
+|--------------------------|--------------------------------|
+| DATE                     | YYYY-MM-DD                     |
+| TIME                     | HH:MM:SS                       |
+| TIME WITH TIME ZONE      | HH:MM:SS (-|+) H:MM            |
+| TIMESTAMP                | YYYY-MM-DD HH:MM:SS            |
+| TIMESTAMP WITH TIME ZONE | YYYY-MM-DD HH:MM:SS (-|+) H:MM |
+
+### **Outros**
+| Boolean | Binário |
+|---------|---------|
+| BOOLEAN | BYTEA   |
