@@ -399,6 +399,7 @@ WHERE table_schema NOT IN
 	('information_schema', 'pg_catalog');
 ```
 
+## **TCL**
 ### **TRANSACTION**
 ```sql
 -- 1. Iniciar transação
