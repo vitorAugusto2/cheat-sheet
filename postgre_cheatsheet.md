@@ -448,7 +448,7 @@ $mytag$This is a string.$mytag$
 | \n        		  | Nova linha       |
 | \r        		  | Retorno de carro |
 | \b        	  	  | Backspace        |
-| \\        		  | Barra invertida  |
+| \ \        		  | Barra invertida  |
 
 | Tipo de dado | 
 |--------------|
@@ -467,9 +467,9 @@ $mytag$This is a string.$mytag$
 |--------------------------|--------------------------------|
 | DATE                     | YYYY-MM-DD                     |
 | TIME                     | HH:MM:SS                       |
-| TIME WITH TIME ZONE      | HH:MM:SS (-|+) H:MM            |
+| TIME WITH TIME ZONE      | HH:MM:SS (-+) H:MM             |
 | TIMESTAMP                | YYYY-MM-DD HH:MM:SS            |
-| TIMESTAMP WITH TIME ZONE | YYYY-MM-DD HH:MM:SS (-|+) H:MM |
+| TIMESTAMP WITH TIME ZONE | YYYY-MM-DD HH:MM:SS (-+) H:MM  |
 
 ### **Outros**
 | Boolean | Binário |
