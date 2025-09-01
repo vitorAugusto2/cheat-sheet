@@ -476,3 +476,17 @@ $mytag$This is a string.$mytag$
 | Boolean | Binário |
 |---------|---------|
 | BOOLEAN | BYTEA   |
+
+
+## **Operadores e Funções**
+| Operadores lógicos   | Operadores de comparacação (símbolos)       | Operadores de comparação (palavras-chaves)         | Operadores matemáticos        |
+|----------------------|---------------------------------------------|----------------------------------------------------|-------------------------------|
+| AND <br> OR <br> NOT | = <br> !=, <> <br> < <br> <= <br> > <br> >= | BETWEEN <br> EXISTS <br> IN <br> IS NULL <br> LIKE | + <br> - <br> * <br> / <br> % |
+
+| Funções de agregação                                | Funções numéricas                                                                                                                                           | Funções de string                                                                                                    | Funções de data e hora                                | Funçõe de valores nulos |
+|-----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|-------------------------|
+| COUNT() <br> SUM() <br> AVG() <br> MIN() <br> MAX() | ABS() <br> SIGN() <br> POWER <br> SQRT() <br> EXP() <br> LOG() <br> LN() <br> MOD() <br> PI() <br> COS() <br> SIN() <br> RANDOM() <br> ROUND() <br> CAST()  | LENGTH() <br> UPPER(), LOWER() <br> TRIM(), LTRIM(), RTRIM() <br> CONCAT() <br> SUBSTR() <br> REPLACE() <br> REGEXP  | CURRENT_DATE <br> CURRENT_TIME <br> CURRENT_TIMESTAMP | COALCASE()              |
+
+
+
+ 
