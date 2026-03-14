@@ -1,5 +1,5 @@
 # PostgreSQL
-* Termos
+**Termos**
 	- Palavra-chave: texto com significado em SQL (escrita em maiuscula) 
 		+ Ex: `SELECT`, `FROM`, `JOIN`, `WHERE`, `ORDER BY`, ...
 	- Funções: tipo especial de palavra-chave.
@@ -63,14 +63,14 @@
 			FROM "animal";
 			```
       
-* Sublinguagens
+**Sublinguagens**
 	- DQL (Data Query Language): SELECT
 	- DDL (Data Definition Language): CREATE, ALTER e DROP
 	- DML (Data Manipulation Language): INSERT, UPDATE e DELETE
 	- DCL (Data Control Language): GRANTE e REVOKE
 	- TCL (Transactin Control Language): COMMIT e ROLLBACK
 
-* Ordem de escrita
+**Ordem de escrita**
 	1. SELECT
 	2. FROM
 	3. WHERE
@@ -78,7 +78,7 @@
 	5. HAVING 
 	6. ORDER BY
 
-* Ordem de execução
+**Ordem de execução**
 	1. FROM
 	2. WHERE
 	3. GROUP BY
