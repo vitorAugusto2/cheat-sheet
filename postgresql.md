@@ -287,6 +287,7 @@ LIMIT 10;
 ```
 
 ### Avançado
+---
 #### **CASE, AGG, WINDOW FUNCTION e PIVOT**
 ```sql
 -- 1) CASE
