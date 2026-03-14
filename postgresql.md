@@ -374,7 +374,7 @@ WHERE table_schema NOT IN
 ## **DML** 
 
 ## **TCL**
-### **TRANSACTION**
+### **Transaction**
 ```sql
 -- 1. Iniciar transação
 START TRANSACTION;
