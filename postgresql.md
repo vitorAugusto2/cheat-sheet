@@ -1,11 +1,11 @@
 # PostgreSQL
 * Termos
 	- Palavra-chave: texto com significado em SQL (escrita em maiuscula) 
-		+ Ex: SELECT, FROM, INNER JOIN, ...
+		+ Ex: `SELECT`, `FROM`, `JOIN`, `WHERE`, `ORDER BY`, ...
 	- Funções: tipo especial de palavra-chave.
-		+ Ex: COUNT(), YEAR(), ...
+		+ Ex: `COUNT()`, `YEAR()`, `SUM()`, `AVG()`, ...
 
-	- Identificadores: nome do objeto do banco de dados sendo uma tabela ou coluna (escrita em minuscula com `_`)
+	- Identificadores: nome do objeto do banco de dados sendo uma tabela ou coluna (escrita em minúsculo e podendo usar _)
 		+ Ex: 
 			```sql
 			SELECT a.**name** (coluna)
@@ -24,23 +24,45 @@
 			FROM animal AS a;**
 			```
 	- Cláusula: um pedaço de uma instrução
-		+ Ex: "Cláusula SELECT", "Cláusula WHERE", ...
-
+		+ Ex: 
+		    ```sql
+              SELECT a.name      -- cláusula SELECT
+		      FROM animal a      -- cláusula FROM
+		      WHERE a.age > 5;   -- cláusula WHERE
+			```
 	- Expressão: uma fórmula que resulta em um valor
 		+ Ex:
 		    ```sql
 			COUNT(a.name)
+      		a.ano + 1
 			```
 	- Predicados/Instruções Condicionais: comparação lógica que resulta em três valores -> TRUE/FALSE/UNKNOWN
-		+ Ex: **colocar algum exemplo**
+		+ Ex:
+            ```sql
+			a.nome = 'Rex'
+			a.ano BETWEEN 1 AND 10
+			a.nome IS NULL
+			```
 
 	- Comentários: texto que é ignorado quando o código é executado
 		+ Ex: 
-		```sql-- Isso é um comentário```
+			```sql
+			-- Isso é um comentário
+			SELECT * FROM animal;
+			```
 	- Aspas:
 		+ Simples -> 'Strings'
+			```sql
+			SELECT *
+			FROM animal
+			WHERE nome = 'Rex';
+   			```
 		+ Duplas -> "Identificadores"
-
+    		```sql
+ 			SELECT "name"
+			FROM "animal";
+			```
+      
 * Sublinguagens
 	- DQL (Data Query Language): SELECT
 	- DDL (Data Definition Language): CREATE, ALTER e DROP
