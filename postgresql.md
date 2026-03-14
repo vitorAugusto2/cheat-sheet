@@ -1,11 +1,11 @@
 # PostgreSQL
 * Termos
-	- Palavra-chave: texto com significado em SQL
+	- Palavra-chave: texto com significado em SQL (escrita em maiuscula) 
 		+ Ex: SELECT, FROM, INNER JOIN, ...
 	- Funções: tipo especial de palavra-chave.
 		+ Ex: COUNT(), YEAR(), ...
 
-	- Identificadores: nome do objeto do banco de dados sendo uma tabela ou coluna
+	- Identificadores: nome do objeto do banco de dados sendo uma tabela ou coluna (escrita em minuscula com `_`)
 		+ Ex: 
 			```sql
 			SELECT a.**name** (coluna)
