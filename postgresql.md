@@ -101,14 +101,14 @@ SELECT
 FROM dbo.table1 AS tb1;
 
 -- 7) Subconsultas
--- 7.1) Correlacionadas
+-- 7.1) Correlacionadas:  referencia valores da consulta externa
 SELECT
 	column1,
 	column2,
 	(SELECT expression FROM table1) AS expression_name
 FROM table1;
 
--- 7.2) Não Correlacionadas
+-- 7.2) Não Correlacionadas: nao referencia a consulta externa
 SELECT
 	column1,
 	column2,
@@ -120,6 +120,7 @@ FROM table1 AS tb1;
 SELECT DISTINCT column1 
 FROM table1;
 
+-- 8.1) Contar números de valores exclusivos
 SELECT COUNT(*) AS num_total
 FROM table1;
 
@@ -162,11 +163,28 @@ WHERE column1 = 1
 LIMIT 10;
 
 -- 2) Utilizando LIKE
+-- buscar padrões em textos
+-- % - qualquer número de caracteres
+-- _ - um único caractere
+
+-- 2.1) LIKE
 SELECT
-	column1,
-	column2
+	column1
+FROM table1
+WHERE column1 LIKE 'Postgre%';
+
+-- 2.2) NOT LIKE
+SELECT
+	column1
 FROM table1
 WHERE column1 NOT LIKE '%Postgre%';
+
+-- 2.3) ILIKE
+-- ignora maiúsculas e minúsculas
+SELECT
+	column1
+FROM table1
+WHERE column1 ILIKE '%Postgresql%';
 
 -- 3) Vários predicados com operadores
 SELECT
@@ -248,9 +266,8 @@ LIMIT 10;
 
 ### **CASE, AGG, WINDOW FUNCTION e PIVOT**
 ```sql
--- CASE: lógica if-else
---
 -- 1) CASE
+-- Lógica if-else
 SELECT
 	CASE
 		WHEN condition THEN result
@@ -260,6 +277,7 @@ SELECT
 	END AS name_column;
 
 -- 1.1) COALESCE + CASE
+-- Substitui todos os valores NULL de uma coluna por um valor diferente
 SELECT
 	COALESCE(
 		CASE
