@@ -286,7 +286,8 @@ WHERE column1 = 1
 LIMIT 10;
 ```
 
-### **CASE, AGG, WINDOW FUNCTION e PIVOT**
+### Avançado
+#### **CASE, AGG, WINDOW FUNCTION e PIVOT**
 ```sql
 -- 1) CASE
 -- Lógica if-else
@@ -314,7 +315,7 @@ SELECT
 -- 2) GROUP BY
 
 ```
-
+## **DDL**
 ### **UPDATE**
 ```sql
 -- 1) Renomeação 
@@ -369,6 +370,7 @@ FROM information_schema.views
 WHERE table_schema NOT IN
 	('information_schema', 'pg_catalog');
 ```
+## **DML** 
 
 ## **TCL**
 ### **TRANSACTION**
