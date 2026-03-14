@@ -11,7 +11,7 @@
 			SELECT a.**name** (coluna)
 			FROM **animal** a (tabela)
 			```
-	- Aliases: renomia uma tabela ou coluna temporiariamente; **Emoji joinha**
+	- Aliases: renomia uma tabela ou coluna temporiariamente
 		+ Ex:
 			```sql
 			SELECT a.name 
