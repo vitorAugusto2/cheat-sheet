@@ -2,55 +2,55 @@
 **Termos**
 
 - Palavra-chave: texto com significado em SQL (escrita em maiuscula) 
-	+ Ex: `SELECT`, `FROM`, `JOIN`, `WHERE`, `ORDER BY`, ...
+	+ `SELECT`, `FROM`, `JOIN`, `WHERE`, `ORDER BY`, ...
+
 - Funções: tipo especial de palavra-chave.
-	+ Ex: `COUNT()`, `YEAR()`, `SUM()`, `AVG()`, ...
+	+ `COUNT()`, `YEAR()`, `SUM()`, `AVG()`, ...
 
 - Identificadores: nome do objeto do banco de dados sendo uma tabela ou coluna (escrita em minúsculo e podendo usar _)
-	+ Ex: 
-		```sql
-		SELECT a.**name** (coluna)
-		FROM **animal** a (tabela)
-		```
+	```sql
+	SELECT a.**name** (coluna)
+	FROM **animal** a (tabela)
+	```
+
 - Aliases: renomia uma tabela ou coluna temporiariamente
-	+ Ex:
-		```sql
-		SELECT a.name 
-		FROM animal **AS** a (alias)
-		```
+	```sql
+	SELECT a.name 
+	FROM animal **AS** a (alias)
+	```
+
 - Instruções: começa com palavra-chave e termina com ponto e vírgula
-	+ Ex:
-		```sql
-		**SELECT a.name 
-		FROM animal AS a;**
-		```
+	```sql
+	**SELECT a.name 
+	FROM animal AS a;**
+	```
+
 - Cláusula: um pedaço de uma instrução
-	+ Ex: 
-		```sql
-		  SELECT a.name      -- cláusula SELECT
-		  FROM animal a      -- cláusula FROM
-		  WHERE a.age > 5;   -- cláusula WHERE
-		```
+	```sql
+	  SELECT a.name      -- cláusula SELECT
+	  FROM animal a      -- cláusula FROM
+	  WHERE a.age > 5;   -- cláusula WHERE
+	```
+
 - Expressão: uma fórmula que resulta em um valor
-	+ Ex:
-		```sql
-		COUNT(a.name)
-		a.ano + 1
-		```
+	```sql
+	COUNT(a.name)
+	a.ano + 1
+	```
+
 - Predicados/Instruções Condicionais: comparação lógica que resulta em três valores -> TRUE/FALSE/UNKNOWN
-	+ Ex:
-		```sql
-		a.nome = 'Rex'
-		a.ano BETWEEN 1 AND 10
-		a.nome IS NULL
-		```
+	```sql
+	a.nome = 'Rex'
+	a.ano BETWEEN 1 AND 10
+	a.nome IS NULL
+	```
 
 - Comentários: texto que é ignorado quando o código é executado
-	+ Ex: 
-		```sql
-		-- Isso é um comentário
-		SELECT * FROM animal;
-		```
+	```sql
+	-- Isso é um comentário
+	SELECT * FROM animal;
+	```
+
 - Aspas:
 	+ Simples -> 'Strings'
 		```sql
