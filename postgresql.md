@@ -291,7 +291,6 @@ LIMIT 10;
 ```
 
 ### Avançado
----
 #### **CASE e COALESCE**
 ```sql
 -- 1) CASE
@@ -318,7 +317,7 @@ SELECT
 	) AS name_column;
 ```
 
-## **Agrupamento e resumindo**
+#### **Agrupamento e resumindo**
 ```sql
 -- 1) Funções de Agregação para resumir varias linhas em único valor
 -- COUNT(), SUM(), MIN(), MAX(), AVG(), ARRAY_AGG()
@@ -369,8 +368,10 @@ GROUP BY GROUPING SETS(year, month)
 ORDER BY year, month;
 ```
 
-## **Funções de Janela**
+#### **Funções de Janela**
 
+
+## **JOINS**
 
 
 ## **DDL**
