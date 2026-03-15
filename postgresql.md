@@ -371,7 +371,32 @@ ORDER BY year, month;
 #### **Funções de Janela**
 
 
-## **JOINS**
+## **Associação de tabelas**
+### **Junção**
+```sql
+-- Combinar dados de várias tabelas dentro da mesma consulta
+
+<imagem>
+<tabela
+
+-- 1) Sintaxe JOIN ... ON ...
+SELECT *
+FROM states AS s
+INNER JOIN pets AS p ON s.name = p.name;
+
+-- 1.1) USING - nomes das colunas forem iguais
+SELECT *
+FROM states 
+INNER JOIN pets USING(name);
+
+-- 1.2) NATURAL JOIN - em vez de INNER JOIN, apenas se os nomes das colunas forem iguais
+SELECT *
+FROM states
+NATURAL JOIN pets;
+```
+### **União**
+
+### **Expressões de tabelas comuns (CTE)**
 
 
 ## **DDL**
