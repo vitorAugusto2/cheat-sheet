@@ -320,7 +320,7 @@ SELECT
 
 ## **Agrupamento e resumindo**
 ```sql
-1) Funções de Agregação para resumir varias linhas em único valor
+-- 1) Funções de Agregação para resumir varias linhas em único valor
 -- COUNT(), SUM(), MIN(), MAX(), AVG(), ARRAY_AGG()
 
 SELECT
@@ -329,22 +329,22 @@ SELECT
 FROM table1 AS tb1
 GROUP BY tb1.column1;
 
-1.1) Lista Classificada
+-- 1.1) Lista Classificada
 SELECT
 	tb1.column1,
 	ARRAY_AGG(tb1.column2 ORDER BY tb1.column2) 
 FROM table1 AS tb1
 GROUP BY tb1.column1;
 
-1.2) Lista Exclusiva
+-- 1.2) Lista Exclusiva
 SELECT
 	tb1.column1,
 	ARRAY_AGG(DISTINCT tb1.column2) 
 FROM table1 AS tb1
 GROUP BY tb1.column1;
 
-2) ROLLUP, CUBE e GROUPING SETS
-2.1) ROLLUP - inclui linhas adicionais de subtotais e total geral
+-- 2) ROLLUP, CUBE e GROUPING SETS
+-- 2.1) ROLLUP - inclui linhas adicionais de subtotais e total geral
 SELECT
 	year, month,
 	SUM(amount) AS total
@@ -352,7 +352,7 @@ FROM spendings
 GROUP BY ROLLUP(year, month)
 ORDER BY year, month;
 
-2.2) CUBE - inclui linhas adicionais de todas as combinações possíveis das colunas pelas quais você está fazendo o agrupando, assim como total geral
+-- 2.2) CUBE - inclui linhas adicionais de todas as combinações possíveis das colunas pelas quais você está fazendo o agrupando, assim como total geral
 SELECT
 	year, month,
 	SUM(amount) AS total
@@ -360,7 +360,7 @@ FROM spendings
 GROUP BY CUBE(year, month)
 ORDER BY year, month;
 
-2.3) GROUPING SETS - agrupamentos específicos que queremos exibir; CUBE incluindo agrupamento de uma coluna de cada vez
+-- 2.3) GROUPING SETS - agrupamentos específicos que queremos exibir; CUBE incluindo agrupamento de uma coluna de cada vez
 SELECT
 	year, month,
 	SUM(amount) AS total
