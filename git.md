@@ -1,5 +1,7 @@
 # Comandos GIT
 
+[cheat-sheet-git.pdf](https://github.com/user-attachments/files/26271858/cheat-sheet-git.pdf)
+
 **Configurações inicial**
 ```
 $ git config --global user.name "[github nome]"
@@ -70,5 +72,5 @@ $ git merge "branch a receber merge"
 $ git pull 
 ```
 
-[cheat-sheet-git.pdf](https://github.com/user-attachments/files/26271858/cheat-sheet-git.pdf)
+
 
