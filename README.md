@@ -1,18 +1,15 @@
-# My cheat sheets
+# Cheat Sheet
 
-Este repositório foi criado com o objetivo de aumentar a produtividade e facilitar a consulta de informações essenciais.
+Este repositório com foco em Ciência de Dados foi criado com o objetivo de aumentar a produtividade e facilitar a consulta de informações essenciais.
 
-## Por que usar Cheat Sheets ?
-Cheat sheets (ou folhas de consulta rápida) são ferramentas poderosas para quem busca:
+## Conteúdo
 
-* **Aumentar a produtividade:** Comando na ponta dos dedos, sem precisar navegar em documentações longas.
-* **Aprender mais rápido:** Ao revisar frequentemente, você reforça o aprendizado e fixa novos conceitos.
-* **Organização:** Uma coleção estruturada para evitar buscas intermináveis pelo Google.
-
-## O que você encontra aqui ?
-
+1. Estatística  
 1. Python
-2. Pandas
-3. PostgreSQL
-4. OS
-5. Git
+2. SQL
+3. Git
+4. Pandas
+5. Numpy
+6. PySpark
+7. Matplolib e Seaborn
+9. Plotly
