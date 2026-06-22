@@ -1,0 +1,68 @@
+{
+    "theme": "ayu-mirage.sublime-theme",
+    "color_scheme": "ayu-dark.sublime-color-scheme",
+
+    "font_face": "JetBrains Mono",
+    "font_size": 12,
+    "font_options": ["subpixel_antialias"],
+
+    "highlight_line": true,
+    "caret_extra_width": 1,
+    "line_padding_top": 2,
+    "line_padding_bottom": 2,
+
+    "draw_white_space": "none",
+    "scroll_past_end": true,
+    "word_wrap": false,
+    "rulers": [100],
+
+    "translate_tabs_to_spaces": true,
+    "tab_size": 4,
+    "detect_indentation": true,
+
+    "ensure_newline_at_eof_on_save": true,
+    "trim_trailing_white_space_on_save": true,
+
+    "hot_exit": true,
+    "remember_open_files": true,
+    "remember_open_folders": true,
+
+    // "auto_complete": true,
+    // "auto_complete_commit_on_tab": true,
+    // "auto_match_enabled": true,
+
+    "highlight_modified_tabs": true,
+    "preview_on_click": false,
+    "save_on_focus_lost": true,
+    "show_full_path": true,
+
+    "find_selected_text": true,
+    "copy_with_empty_selection": false,
+    "drag_text": false,
+
+    "show_encoding": true,
+    "show_line_endings": true,
+    "reload_file_on_change": true,
+
+    "folder_exclude_patterns": [
+        ".git",
+        "node_modules",
+        ".venv",
+        "__pycache__",
+        "dist",
+        "build"
+    ],
+
+    "file_exclude_patterns": [
+        "*.pyc",
+        "*.pyo",
+        "*.log",
+        "*.tmp",
+        "*.cache"
+    ],
+    "ignored_packages":
+    [
+        "Vintage",
+    ],
+    "index_files": true,
+}
